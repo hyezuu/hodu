@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .blind {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+
+        .hoduWrap {
+            font-family: "Pretendard Variable", sans-serif;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: fixed;
+            background-color: #F2E9D8;
+            display: flex;
+            height: 102px;
+            width: 100%;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .contents-width {
+            width: 100%;
+            padding-inline: 160px;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            /*    위에 설정 해주니까 부모요소 영역 넘어가는 문제 해결됐다*/
+        }
+
+        .logo {
+            width: 130px;
+            height: 40px;
+            margin-block: 31px;
+        }
+
+        .no-bullets {
+            list-style-type: none;
+        }
+
+
+        .top-elements a {
+            text-decoration: none;
+            color: #000000;
+            margin-left: 30px;
+        }
+
+
+        .top-elements {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1 1;
+            gap: 35px;
+        }
+
+        .top-elements ul {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .top-elements li {
+            gap: 30px;
+        }
+
+        .showMore, div .download, .subscribe-button {
+            text-decoration: none;
+            background-color: #D97652;
+            color: #FFFFFF;
+            width: 140px;
+            height: 50px;
+            border-radius: 40px;
+            display: flex; /* Flexbox 사용 */
+            align-items: center; /* 수직 정렬 */
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+
+        .intro {
+            padding-top: 102px;
+            background-color: #F2E9D8;
+        }
+
+        .column {
+            display: flex;
+            gap: 40px;
+            flex-flow: column wrap;
+        }
+
+        .column p {
+            font-size: 16px;
+            font-weight: 400;
+            color: black;
+        }
+
+        .intro h2 {
+            margin-top: 200px;
+            font-size: 48px;
+            font-weight: 700;
+            flex-shrink: 1;
+        }
+
+        .intro img {
+            width: 415px;
+            height: 766px;
+            margin-top: 32px;
+            flex-shrink: 1;
+        }
+
+        .cat-random {
+            width: 100%;
+        }
+
+        .cat-random img {
+            width: 660px;
+            height: 390px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .description {
+            width: 510px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .description h3 {
+            font-weight: 700;
+            font-size: 36px;
+            color: black;
+        }
+
+        .grid {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .grid h2 {
+            color: #D97652;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .grid p {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .grid p span {
+            font-weight: 700;
+            color: #D97652;
+        }
+
+        .grid-photo {
+            margin-top: 88px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 72px;
+        }
+
+        .grid-photo img {
+            width: 378px;
+            height: 378px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .more span {
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .more {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .map {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map h2 {
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        .map p {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 16px;
+            color: #606367;
+        }
+
+        .kakao-map, #daumRoughmapContainer1716189430142 {
+            margin-top: 46px;
+            width: 100%;
+            height: 700px;
+            border-radius: 12px;
+            flex: 1 1 ;
+        }
+
+
+        .social-list {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .social-list img {
+            width: 42px;
+            height: 42px;
+        }
+
+        .subscribe-button {
+            border: none;
+            width: 135px;
+            height: 50px;
+        }
+
+        .email-form {
+            width: 100%;
+            display: flex;
+            height: 200px;
+            border-radius: 30px;
+            background-color: #263140;
+            padding: 50px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .email-form-label {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .email-form h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .email-form p {
+            font-size: 14px;
+            color: #F2E9D8;
+        }
+
+        .input-form {
+            padding-inline: 6px;
+            display: flex;
+            width: 530px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: #FFFFFF;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form {
+            margin-bottom: 240px;
+        }
+
+        .input-form img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .input-form div {
+            padding-left: 18px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .input-form input {
+            border: none;
+            width: 200px;
+        }
+
+        .footer {
+            position: relative;
+        }
+
+        .background-img {
+            width: 100%;
+            height: 340px;
+            margin-top: 101px;
+            position: absolute;
+            bottom: 102px;
+            z-index: -1;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+            color: #767676;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--페이지 전체에 flex 적용-->
+<div class="hoduWrap">
+    <!--    헤더영역. 배경색 설정 필요-->
+    <header class="header">
+        <!--        헤더 내 컨텐츠 영역. 넓이 지정 필요 !-->
+        <div class="contents-width">
+            <img class="logo" src="img/icon/Logo-fin.png" alt="호두로고">
+            <nav class="top-elements">
+                <ul class="no-bullets">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <a class="download" href="#">Download</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro contents-width">
+            <div class="column">
+                <h2>Lorem Ipsum is simply
+                    <br>
+                    dummy text of the printing and</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    <br>
+                    typesetting industry.
+                    <br>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    <br>
+                    ever since the 1500s, when an unknown</p>
+                <a class="download" href="#">Download</a>
+            </div>
+            <img src="img/cats/box_cat.png" alt="상자를 모자처럼 쓰고있는 고앵이 호두">
+        </section>
+        <article class="contents-width cat-random">
+            <h2 class="blind">호두 일상사진 랜덤 띄워주는 곳</h2>
+            <img src="img/cats/img_4.png" alt="">
+            <div class="description">
+                <h3>Lorem Ipsum is simply
+                    dummy text of the printing and dummy text</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            </div>
+        </article>
+
+        <section class="grid contents-width">
+            <h2>dummy text of the printing and dummy</h2>
+            <p>Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.
+                <br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+            <ul class="grid-photo no-bullets">
+                <li><img src="img/cats/img_1.png" alt=""></li>
+                <li><img src="img/cats/img_2.png" alt=""></li>
+                <li><img src="img/cats/img_3.png" alt=""></li>
+                <li><img src="img/cats/img_3%20(1).png" alt=""></li>
+                <li><img src="img/cats/img_1%20(1).png" alt=""></li>
+                <li><img src="img/cats/img_2%20(1).png" alt=""></li>
+            </ul>
+            <div class="more">
+                <span>Continue exploring HODU</span>
+                <a class="showMore" href="#">Show more</a>
+            </div>
+        </section>
+        <hr>
+        <section class="map contents-width">
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <h2>Where you'll be</h2>
+            <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+            <div id="daumRoughmapContainer1716189430142" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+            <!--
+                2. 설치 스크립트
+                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+            -->
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1716189430142",
+                    "key" : "2jdrr"
+                }).render();
+            </script>
+
+<!--            <img class="kakao-map" src="img/dummy/Frame%206%20(1).png" alt="">-->
+        </section>
+
+
+        <form class="form contents-width" action="" method="post">
+            <div class="email-form">
+                <label class="email-form-label" for="user-email">
+                    <h3>Subscribe to our Blog post</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        <br>
+                        Lorem Ipsum has been the industry's standard dummy text </p>
+                </label>
+                <div class="input-form">
+                    <div>
+                        <img src="img/icon/mail.png" alt="">
+                        <input id="user-email" type="email" placeholder="Enter your e-mail address">
+                    </div>
+                    <button class="subscribe-button">subscribe</button>
+                </div>
+            </div>
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <img class="background-img" src="img/cats/img_5.png" alt="">
+        <div class="contents-width">
+            <img class="logo" src="img/icon/Logo-fin.png" alt="호두로고">
+            <ul class="no-bullets social-list">
+                <li><a href="#"><img src="img/icon/icon-blog.png" alt="호두 블로그"></a></li>
+                <li><a href="#"><img src="img/icon/icon-insta.png" alt="호두 인스타그램"></a></li>
+                <li><a href="#"><img src="img/icon/icon-facebook.png" alt="호두 페이스북"></a></li>
+                <li><a href="#"><img src="img/icon/icon-youtube.png" alt="호두 유튜브"></a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
