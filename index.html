@@ -14,6 +14,11 @@
             font-weight: 400;
         }
 
+        .hodu-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
         .blind {
             position: absolute;
             overflow: hidden;
@@ -142,7 +147,6 @@
             height: 390px;
             border-radius: 30px;
             box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.25);
-            flex: 1 1 660px;
             box-sizing: border-box;
         }
 
@@ -413,7 +417,7 @@
 </head>
 <body>
 <!--페이지 전체에 flex 적용-->
-
+<div class="hodu-wrapper">
 <!--    헤더영역. 배경색 설정 필요-->
 <header class="header">
     <!--        헤더 내 컨텐츠 영역. 넓이 지정 필요 !-->
@@ -538,5 +542,6 @@
         </ul>
     </div>
 </footer>
+</div>
 </body>
 </html>
