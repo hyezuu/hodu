@@ -14,11 +14,6 @@
             font-weight: 400;
         }
 
-        .hodu-wrapper {
-            display: flex;
-            flex-direction: column;
-        }
-
         .blind {
             position: absolute;
             overflow: hidden;
@@ -46,7 +41,7 @@
         }
 
         .contents-width {
-            width: 100%;
+            width: inherit;
             padding-inline: 160px;
             display: flex;
             justify-content: space-between;
@@ -349,13 +344,14 @@
 
 
         @media (max-width: 1455px) {
-            .header .contents-width{
+            .header .contents-width {
                 justify-content: space-between;
             }
 
-            .header .top-elements{
+            .header .top-elements {
                 display: none;
             }
+
             .contents-width {
                 justify-content: center;
                 flex-wrap: wrap;
@@ -398,7 +394,7 @@
                 align-self: center;
             }
 
-            .mobile-menu button{
+            .mobile-menu button {
                 background-color: transparent;
                 border: none;
                 height: 40px;
@@ -412,12 +408,36 @@
 
         }
 
+        @media (min-width: 1920px) {
+            .intro {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .contents-width {
+                width: 1920px;
+                align-self: center;
+                text-align: center;
+                gap: 110px
+            }
+
+            .header {
+                justify-content: center;
+            }
+
+            .footer {
+                display: flex;
+                justify-content: center;
+            }
+
+        }
+
 
     </style>
 </head>
 <body>
 <!--페이지 전체에 flex 적용-->
-<div class="hodu-wrapper">
 <!--    헤더영역. 배경색 설정 필요-->
 <header class="header">
     <!--        헤더 내 컨텐츠 영역. 넓이 지정 필요 !-->
@@ -439,21 +459,23 @@
     </div>
 </header>
 <main>
-    <section class="intro contents-width">
-        <div class="column">
-            <h2>Lorem Ipsum is simply
-                <br>
-                dummy text of the printing and</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and
-                <br>
-                typesetting industry.
-                <br>
-                Lorem Ipsum has been the industry's standard dummy text
-                <br>
-                ever since the 1500s, when an unknown</p>
-            <a class="download" href="#">Download</a>
+    <section class="intro ">
+        <div class="contents-width">
+            <div class="column">
+                <h2>Lorem Ipsum is simply
+                    <br>
+                    dummy text of the printing and</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    <br>
+                    typesetting industry.
+                    <br>
+                    Lorem Ipsum has been the industry's standard dummy text
+                    <br>
+                    ever since the 1500s, when an unknown</p>
+                <a class="download" href="#">Download</a>
+            </div>
+            <img src="img/cats/box_cat.png" alt="상자를 모자처럼 쓰고있는 고앵이 호두">
         </div>
-        <img src="img/cats/box_cat.png" alt="상자를 모자처럼 쓰고있는 고앵이 호두">
     </section>
     <article class="contents-width cat-random">
         <h2 class="blind">호두 일상사진 랜덤 띄워주는 곳</h2>
@@ -542,6 +564,5 @@
         </ul>
     </div>
 </footer>
-</div>
 </body>
 </html>
