@@ -123,11 +123,12 @@
     </form>
     <div class="modal-overlay">
         <section class="hodu-modal">
+            <button class="close-button">&times;</button>
             <h2 class="blind">구독감사용 친하게 지내자</h2>
             <img class="cat-face" src="img/modal/cat%201.png" alt="">
             <span>Thank you!</span>
             <p>Lorem Ipsum is simply dummy text of the printing industry. </p>
-            <button class="i-love-hodu">OK ! I Love HODU</button>
+            <button class="i-love-hodu" type="button">OK ! I Love HODU</button>
         </section>
     </div>
 </main>
@@ -145,20 +146,6 @@
     </div>
 </footer>
 
-<script>
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const subscribeBtn = document.querySelector('.subscribe-button');
-
-    function openModal() {
-        modalOverlay.classList.add('show');
-    }
-
-    function closeModal() {
-        if (modalOverlay.classList.contains('show')) modalOverlay.classList.remove('show');
-    }
-
-    subscribeBtn.addEventListener('click', openModal);
-    modalOverlay.addEventListener('click', closeModal);
-</script>
+<script src="script.js"></script>
 </body>
 </html>
