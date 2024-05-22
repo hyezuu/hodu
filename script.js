@@ -22,7 +22,7 @@
             heart.textContent = '❤️'; // 하트 이모지
             heart.classList.add('heart');
 
-            heart.style.left = Math.random() * (window.innerWidth - 50) + 'px'; // 랜덤한 가로 위치 (화면 가장자리에서 벗어나지 않게 -50)
+            heart.style.left = Math.random() * (window.innerWidth - 50) + 'px';
             // 상단에서 시작하도록 설정
             heart.style.top = '-50px'; // 상단에서 시작
 
@@ -32,7 +32,6 @@
 
             modalOverlay.appendChild(heart);
 
-            // 애니메이션이 끝나면 요소를 제거합니다.
             heart.addEventListener('animationend', function () {
                 heart.remove();
             });
