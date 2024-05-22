@@ -426,7 +426,7 @@ main {
 .heart {
     position: absolute;
     font-size: 24px;
-    animation: fall 3s linear;
+    animation: fall 2s linear;
 }
 
 .heart:nth-child(2) {
@@ -443,8 +443,8 @@ main {
         top: -50px;
         opacity: 1;
     }
-    100% {
-        top: 100vh;
+    75% {
+        top: 75vh;
         opacity: 0;
     }
 }
