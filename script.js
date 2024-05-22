@@ -3,7 +3,6 @@
     const subscribeBtn = document.querySelector('.subscribe-button');
     const modalOverlay = document.querySelector('.modal-overlay');
     const loveHoduBtn = document.querySelector('.i-love-hodu');
-    const hoduModal = document.querySelector('.hodu-modal');
 
     function openModal() {
         modalOverlay.classList.add('show');
