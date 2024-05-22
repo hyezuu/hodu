@@ -8,6 +8,10 @@
     font-weight: 400;
 }
 
+.hidden {
+    display: none;
+}
+
 .blind {
     position: absolute;
     overflow: hidden;
@@ -398,6 +402,10 @@ main {
     .mobile-menu img {
         width: inherit;
         height: inherit;
+    }
+
+    .footer .contents-width {
+        justify-content: space-between;
     }
 
 }
