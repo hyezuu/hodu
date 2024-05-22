@@ -426,7 +426,7 @@ main {
 .heart {
     position: absolute;
     font-size: 24px;
-    animation: fall 2s linear;
+    animation: fall 2s linear forwards;
 }
 
 .heart:nth-child(2) {
@@ -440,11 +440,11 @@ main {
 
 @keyframes fall {
     0% {
-        top: -50px;
+        transform: translateY(-20px); /* 시작 위치: 화면 위에서 시작 */
         opacity: 1;
     }
-    75% {
-        top: 75vh;
+    100% {
+        transform: translateY(calc(100vh + 20px)); /* 종료 위치: 화면 아래에서 사라짐 */
         opacity: 0;
     }
 }
