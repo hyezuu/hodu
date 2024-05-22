@@ -511,6 +511,7 @@ main {
         border: none;
         height: 40px;
         width: 40px;
+        cursor: pointer;
     }
 
     .mobile-menu img {
@@ -533,7 +534,7 @@ main {
         justify-content:start;
         align-items: end;
         z-index: 100;
-        /*visibility: hidden; !* 처음엔 숨겨두기 *!*/
+        visibility: hidden; /* 처음엔 숨겨두기 */
     }
 
     .mobile-menu-modal {

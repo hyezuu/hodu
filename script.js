@@ -37,3 +37,16 @@
             });
         }
     });
+
+    const openMobileMenuBtn = document.querySelector('.mobile-menu button');
+    const openMobileMenuOverlay = document.querySelector('.mobile-menu-modal-overlay');
+    const closeMobileMenuBtn = document.querySelector('.menu-close-button')
+    function openMobileMenuModal() {
+        openMobileMenuOverlay.classList.add('show');
+    }
+    function closeMobileMenuModal() {
+        openMobileMenuOverlay.classList.remove('show');
+    }
+
+    openMobileMenuBtn.addEventListener('click', openMobileMenuModal);
+    closeMobileMenuBtn.addEventListener('click', closeMobileMenuModal);
