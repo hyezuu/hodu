@@ -85,7 +85,7 @@ main {
     gap: 30px;
 }
 
-.showMore, div .download, .subscribe-button, .i-love-hodu{
+.showMore, div .download, .subscribe-button, .i-love-hodu {
     text-decoration: none;
     background-color: #D97652;
     color: #FFFFFF;
@@ -365,7 +365,7 @@ main {
     border-radius: 30px;
     background-image: url("img/modal/무제-1 1.png");
     background-size: cover;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) ;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -394,6 +394,7 @@ main {
     text-align: center;
     margin-inline: 55px;
 }
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -420,7 +421,7 @@ main {
     height: 50px;
     margin-top: 38px;
     cursor: pointer;
-    overflow-x :hidden;
+    overflow-x: hidden;
 }
 
 .heart {
@@ -435,6 +436,10 @@ main {
 
 .heart:nth-child(3) {
     animation-duration: 1.5s; /* 세 번째 하트는 더 빠르게 떨어지도록 */
+}
+
+.mobile-menu-modal-overlay {
+    display: none;
 }
 
 
@@ -516,6 +521,70 @@ main {
     .footer .contents-width {
         justify-content: space-between;
     }
+
+    .mobile-menu-modal-overlay {
+        position: fixed;
+        align-self: start;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content:start;
+        align-items: end;
+        z-index: 100;
+        /*visibility: hidden; !* 처음엔 숨겨두기 *!*/
+    }
+
+    .mobile-menu-modal {
+        display: flex;
+        width: 75%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #263140;
+    }
+
+    .menu-close-button {
+        width: 32px;
+        height: 32px;
+        margin-top: 22px;
+        margin-left: 20px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-close-button img {
+        width: inherit;
+        height: inherit;
+    }
+
+    .mobile-menu-modal-overlay.show {
+        visibility: visible;
+    }
+
+    .mobile-menu-elements {
+        margin-top: 66px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mobile-menu-elements ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mobile-menu-elements li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        padding-inline: 10px;
+    }
+
+
 
 }
 
