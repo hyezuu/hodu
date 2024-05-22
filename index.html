@@ -86,11 +86,11 @@
             2. 설치 스크립트
             * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
         -->
-        <script charset="UTF-8" class="daum_roughmap_loader_script"
+        <script class="daum_roughmap_loader_script"
                 src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
         <!-- 3. 실행 스크립트 -->
-        <script charset="UTF-8">
+        <script>
             new daum.roughmap.Lander({
                 "timestamp": "1716189430142",
                 "key": "2jdrr"
@@ -103,11 +103,14 @@
 
     <form class="form contents-width" action="" method="post">
         <div class="email-form">
-            <label class="email-form-label" for="user-email">
+            <div class="email-form-label">
                 <h3>Subscribe to our Blog post</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     <br>
                     Lorem Ipsum has been the industry's standard dummy text </p>
+            </div>
+            <label class="blind" for="user-email">
+                "이메일을입력하시요"
             </label>
             <div class="input-form">
                 <div>
