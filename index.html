@@ -101,7 +101,7 @@
     </section>
 
 
-    <form class="form contents-width" action="" method="post">
+    <form class="form contents-width" action="">
         <div class="email-form">
             <div class="email-form-label">
                 <h3>Subscribe to our Blog post</h3>
@@ -117,11 +117,19 @@
                     <img src="img/icon/mail.png" alt="">
                     <input id="user-email" type="email" placeholder="Enter your e-mail address">
                 </div>
-                <button class="subscribe-button">subscribe</button>
+                <button class="subscribe-button" type="button">subscribe</button>
             </div>
         </div>
     </form>
-
+    <div class="modal-overlay">
+        <section class="hodu-modal">
+            <h2 class="blind">구독감사용 친하게 지내자</h2>
+            <img class="cat-face" src="img/modal/cat%201.png" alt="">
+            <span>Thank you!</span>
+            <p>Lorem Ipsum is simply dummy text of the printing industry. </p>
+            <button class="i-love-hodu">OK ! I Love HODU</button>
+        </section>
+    </div>
 </main>
 
 <footer class="footer">
@@ -136,5 +144,21 @@
         </ul>
     </div>
 </footer>
+
+<script>
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const subscribeBtn = document.querySelector('.subscribe-button');
+
+    function openModal() {
+        modalOverlay.classList.add('show');
+    }
+
+    function closeModal() {
+        if (modalOverlay.classList.contains('show')) modalOverlay.classList.remove('show');
+    }
+
+    subscribeBtn.addEventListener('click', openModal);
+    modalOverlay.addEventListener('click', closeModal);
+</script>
 </body>
 </html>
