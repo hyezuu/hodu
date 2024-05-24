@@ -41,8 +41,6 @@ main {
     max-width: calc(100% - (20px * 2));
     margin: 0 auto;
     width: 1920px;
-
-
     padding-inline: 160px;
     display: flex;
     justify-content: space-between;
@@ -101,6 +99,7 @@ main {
     font-weight: 700;
     font-size: 16px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -196,6 +195,7 @@ main {
     height: 378px;
     border-radius: 30px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
 }
 
 .more span {

@@ -72,7 +72,7 @@ showMoreBtn.addEventListener('click', fetchImages);
 
 async function fetchImages() {
     try {
-        const response = await fetch(`https://picsum.photos/v2/list?page=${pageToPatch++}&limit=3`);
+        const response = await fetch(`https://cataas.com/api/cats?skip=${3*(pageToPatch++)}&limit=3`);
 
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
@@ -90,6 +90,6 @@ async function fetchImages() {
 
 function makeImageList(datas) {
     datas.forEach((data) => {
-        listPic.insertAdjacentHTML('beforeend', `<li><img src="${data.download_url}" alt=""></li>`);
+        listPic.insertAdjacentHTML('beforeend', `<li><img src="https://cataas.com/cat?_id=${data._id}" alt=""></li>`);
     });
 }
