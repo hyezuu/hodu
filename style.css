@@ -1,6 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
-
 * {
     padding: 0;
     margin: 0;
@@ -39,7 +38,11 @@ main {
 }
 
 .contents-width {
-    width: inherit;
+    max-width: calc(100% - (20px * 2));
+    margin: 0 auto;
+    width: 1920px;
+
+
     padding-inline: 160px;
     display: flex;
     justify-content: space-between;
@@ -97,6 +100,7 @@ main {
     justify-content: center;
     font-weight: 700;
     font-size: 16px;
+    border: none;
 }
 
 
@@ -129,10 +133,6 @@ main {
     height: 766px;
     margin-top: 32px;
     flex-shrink: 1;
-}
-
-.cat-random {
-    width: 100%;
 }
 
 .cat-random img {
@@ -228,12 +228,11 @@ main {
     color: #606367;
 }
 
-.kakao-map, #daumRoughmapContainer1716189430142 {
+#kakao-map {
     margin-top: 46px;
     width: 100%;
-    height: 700px;
-    /*border-radius: 12px;*/
-    flex: 1 1;
+    height: 520px;
+    border-radius: 12px;
 }
 
 
@@ -593,17 +592,9 @@ main {
         display: flex;
         justify-content: center;
     }
-
-    .contents-width {
-        width: 1920px;
-        align-self: center;
-        gap: 110px
-    }
-
     .map {
         gap: 0;
     }
-
     .header {
         justify-content: center;
     }
