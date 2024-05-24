@@ -88,8 +88,28 @@ async function fetchImages() {
     }
 }
 
+// function makeImageList(datas) {
+//     datas.forEach((data) => {
+//         listPic.insertAdjacentHTML('beforeend', `<li><img src="https://cataas.com/cat?_id=${data._id}" alt=""></li>`);
+//     });
+// }
+
 function makeImageList(datas) {
     datas.forEach((data) => {
-        listPic.insertAdjacentHTML('beforeend', `<li><img src="https://cataas.com/cat?_id=${data._id}" alt=""></li>`);
+        const listItem = document.createElement('li');
+        const img = document.createElement('img');
+        img.src = "img/cats/FN4c9bragAASHBX.jpeg" // 로딩중 이미지로 설정
+
+        listItem.appendChild(img);
+        listPic.appendChild(listItem);
+
+        const tempImage = new Image();
+        tempImage.src = `https://cataas.com/cat?_id=${data._id}`;
+        tempImage.onload = () => {
+            img.src = tempImage.src; // 실제 이미지로 교체
+        };
+        tempImage.onerror = () => {
+            console.error('이미지를 로드하는 데 실패했습니다.');
+        };
     });
 }
