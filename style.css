@@ -454,7 +454,7 @@ main {
 }
 
 
-@media (max-width: 1455px) {
+@media (max-width: 1460px) {
     .header .contents-width {
         justify-content: space-between;
     }
@@ -476,6 +476,7 @@ main {
 
     .cat-random {
         gap: 40px;
+        width: 100%;
     }
 
     .cat-random img {
