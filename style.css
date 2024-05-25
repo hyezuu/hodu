@@ -459,7 +459,7 @@ main {
 .scroll-top img {
     position: fixed;
     bottom: 120px;
-    right: 15px;
+    right: 30px;
     width: inherit;
     height: inherit;
     border:none;
