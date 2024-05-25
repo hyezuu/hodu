@@ -319,6 +319,7 @@ main {
 
 .footer {
     position: relative;
+    display: flex;
 }
 
 .background-img {
@@ -442,6 +443,62 @@ main {
     display: none;
 }
 
+.scroll-top{
+    position: fixed;
+    bottom: 120px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 10;
+    /*transition: opacity 0.5s ease; !* 투명도 변화에 트랜지션 적용 *!*/
+}
+
+.scroll-top img {
+    position: fixed;
+    bottom: 120px;
+    right: 15px;
+    width: inherit;
+    height: inherit;
+    border:none;
+}
+
+.default-scroll {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* 초기 그림자 투명도 0 */
+    transition: box-shadow 0.3s ease; /* 그림자 변화에 트랜지션 적용 */
+    /*border: 2px solid transparent;*/
+    /*transition: border 0.3s ease, border-color 0.3s ease;*/
+    border-radius: 50px;
+}
+
+.scroll-top:hover .default-scroll {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 표시 */
+    /*border: 3px solid rgba(196, 196, 196, 30%);*/
+    border-radius: 50px;
+}
+
+.hidden-img {
+    transition: border 0.3s ease;
+    display: none;
+}
+
+/* 클릭 상태에서 hidden-img를 보여줌 */
+.scroll-top:active .default-scroll {
+    display: none;
+}
+.scroll-top:active .hidden-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 클릭 시 그림자 표시 */
+    /*border: 3px solid rgba(196, 196, 196, 30%);*/
+    border-radius: 50px;
+    display: block;
+}
+
+
+
+
+
 
 @keyframes fall {
     0% {
@@ -545,6 +602,7 @@ main {
         flex-direction: column;
         background-color: #263140;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        z-index: 1000;
     }
 
     .menu-close-button {

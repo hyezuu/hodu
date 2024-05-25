@@ -113,3 +113,26 @@ function makeImageList(datas) {
         };
     });
 }
+
+
+
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+// 스크롤 이벤트 리스너 추가
+window.addEventListener('scroll', () => {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollRatio = window.scrollY / scrollHeight;
+    const ratio = 0.3;
+
+    // 특정 비율 이상일 때 버튼을 완전히 보이게 함
+    if (scrollRatio >= ratio) {
+        scrollTopBtn.style.opacity = '1';
+    } else {
+        // 특정 비율에 도달하기 전까지 비율에 맞게 불투명하게 함
+        scrollTopBtn.style.opacity = scrollRatio * (1/ratio);
+    }
+});
+
+scrollTopBtn.addEventListener('click' ,() => {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+})
