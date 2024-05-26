@@ -6,19 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
         body {
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            gap : 30px;
+            gap: 30px;
             background-color: #f5f5f5;
             font-family: 'Roboto', sans-serif;
         }
 
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
         .container {
+            position: relative;
+            font-family: "Pretendard Variable", sans-serif;
             border: 2px solid #263140;
             display: flex;
             flex-direction: column;
@@ -37,15 +48,24 @@
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 70px;
+            margin-bottom: 66px;
+            color: #D97652;
+        }
+
+        h2{
+            color: #263140;
+            font-size: 30px;
         }
 
         p {
             font-size: 1.2em;
-            color: #666;
-            margin-bottom: 20px;
+            color: #263140;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
         }
 
         .logo {
@@ -54,26 +74,44 @@
             margin-bottom: 50px;
         }
 
+        .sunglasses{
+            width: 230px;
+            position: absolute;
+            bottom:165px;
+            z-index: 1000;
+            /*left: px;*/
+        }
         .cat-photo {
             border: 2px solid #263140;
         }
 
         .image-description {
+            margin-top: 15px;
             font-family: 'Roboto', sans-serif;
             font-size: 1.2em;
             color: #263140;
         }
+
+        .image-description-detail {
+            font-size: 1em;
+            color: #999;
+        }
     </style>
 </head>
 <body>
-<div>
-    <h1>고 사원이 서비스를 준비중입니다!</h1>
-    <p>곧 찾아뵙겠습니다. 기대해 주세요!</p>
+<h1>COMMING SOON !</h1>
+<div class="wrapper">
+    <div class="description">
+        <h2>고 과장이 서비스를 준비중입니다!</h2>
+        <p>곧 찾아뵙겠습니다. 기대해 주세요!</p>
+    </div>
+    <div class="container">
+        <img class="logo" src="img/icon/Logo-fin.png" alt="">
+        <img class="cat-photo" src="img/cats/images.jpeg" alt="">
+        <img class="sunglasses" src="img/cats/pngegg.png" alt="">
+        <strong class="image-description">고앵이 과장</strong>
+        <p class="image-description-detail">비주얼 때문에 직급 상승한건 안비밀</p>
 </div>
-<div class="container">
-    <img class="logo" src="img/icon/Logo-fin.png" alt="">
-    <img class="cat-photo" src="img/cats/images.jpeg" alt="Coming Soon">
-    <p class="image-description">고앵이 사원</p>
 </div>
 </body>
 </html>
