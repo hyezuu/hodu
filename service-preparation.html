@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,36 +13,64 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            gap : 30px;
             background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
+
         .container {
+            display: flex;
+            flex-direction: column;
             text-align: center;
+            align-items: center;
             padding: 20px;
-            background-color: white;
+            gap: 20px;
+            background-color: #F2E9D8;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
+
+
+
         .container img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+
         }
+
         h1 {
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #333;
         }
+
         p {
             font-size: 1.2em;
             color: #666;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            height: 70px;
+            width: 190px;
+        }
+
+        .image-description {
+            font-size: 2em;
+            color: #263140;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>서비스 준비중입니다</h1>
+<div>
+    <h1>고 사원이 서비스를 준비중입니다!</h1>
     <p>곧 찾아뵙겠습니다. 기대해 주세요!</p>
-    <img src="img/cats/images.jpeg" alt="Coming Soon">
+</div>
+<div class="container">
+    <img class="logo" src="img/icon/Logo-fin.png" alt="">
+    <img class="cat-photo" src="img/cats/images.jpeg" alt="Coming Soon">
+    <p class="image-description">고앵이 사원</p>
 </div>
 </body>
 </html>
