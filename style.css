@@ -290,7 +290,7 @@ main {
 .input-form {
     padding-inline: 6px;
     display: flex;
-    max-width: 530px;
+    width: 530px;
     height: 60px;
     border-radius: 60px;
     background-color: #FFFFFF;
@@ -315,6 +315,7 @@ main {
 }
 
 .input-form input {
+    outline: none;
     border: none;
     width: 200px;
 }
@@ -646,6 +647,7 @@ main {
     }
 
     .input-form {
+        max-width: 530px;
         width: 80vw;
     }
 }
