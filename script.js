@@ -2,9 +2,8 @@ const closeButton = document.querySelector('.close-button');
 const subscribeBtn = document.querySelector('.subscribe-button');
 const modalOverlay = document.querySelector('.modal-overlay');
 const loveHoduBtn = document.querySelector('.i-love-hodu');
-
+//모달
 function openModal() {
-    //만약ㄱ에 input의 value가 0보다 클때만 {}
     modalOverlay.classList.add('show');
 }
 
@@ -37,7 +36,7 @@ loveHoduBtn.addEventListener('click', function () {
         });
     }
 });
-
+//모바일 메뉴
 const openMobileMenuBtn = document.querySelector('.mobile-menu button');
 const openMobileMenuOverlay = document.querySelector('.mobile-menu-modal-overlay');
 const closeMobileMenuBtn = document.querySelector('.menu-close-button')
@@ -53,7 +52,7 @@ function closeMobileMenuModal() {
 openMobileMenuBtn.addEventListener('click', openMobileMenuModal);
 closeMobileMenuBtn.addEventListener('click', closeMobileMenuModal);
 
-
+//카카오맵
 const mapContainer = document.getElementById("kakao-map");
 const mapOption = {
     center: new window.kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -62,14 +61,15 @@ const mapOption = {
 new window.kakao.maps.Map(mapContainer, mapOption);
 
 
+//이미지 가져오는부분
 const listPic = document.querySelector('.grid-photo');
 const showMoreBtn = document.querySelector('.showMore');
 let pageToPatch = 1;
 
 
-// btn.addEventListener('click', ()=>{fetchImages(pageToPatch += 1)});
-showMoreBtn.addEventListener('click', fetchImages);
 
+showMoreBtn.addEventListener('click', fetchImages);
+//외부에서 json데이터 가져오기
 async function fetchImages() {
     try {
         const response = await fetch(`https://cataas.com/api/cats?skip=${3*(pageToPatch++)}&limit=3`);
@@ -88,12 +88,7 @@ async function fetchImages() {
     }
 }
 
-// function makeImageList(datas) {
-//     datas.forEach((data) => {
-//         listPic.insertAdjacentHTML('beforeend', `<li><img src="https://cataas.com/cat?_id=${data._id}" alt=""></li>`);
-//     });
-// }
-
+//이미지 넣는부분
 function makeImageList(datas) {
     datas.forEach((data) => {
         const listItem = document.createElement('li');
