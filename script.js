@@ -69,9 +69,18 @@ let pageToPatch = 1;
 
 
 showMoreBtn.addEventListener('click', fetchImages);
-//외부에서 json데이터 가져오기
+
 async function fetchImages() {
+    const len = listPic.children.length;
     try {
+        for(let i=0; i<3; i++){
+            const listItem = document.createElement('li');
+            const img = document.createElement('img');
+            img.src = "img/cats/FN4c9bragAASHBX.jpeg" // 로딩중 이미지로 설정
+            listItem.appendChild(img);
+            listPic.appendChild(listItem);
+        }
+
         const response = await fetch(`https://cataas.com/api/cats?skip=${3*(pageToPatch++)}&limit=3`);
 
         if (!response.ok) {
@@ -81,7 +90,7 @@ async function fetchImages() {
         // 제이슨 데이터를 자바스크립트 객체로 파싱
         const datas = await response.json();
         console.log(datas);
-        makeImageList(datas);
+        makeImageList(datas , len);
 
     } catch (error) {
         console.error(error);
@@ -89,27 +98,19 @@ async function fetchImages() {
 }
 
 //이미지 넣는부분
-function makeImageList(datas) {
+function makeImageList(datas, len) {
     datas.forEach((data) => {
-        const listItem = document.createElement('li');
-        const img = document.createElement('img');
-        img.src = "img/cats/FN4c9bragAASHBX.jpeg" // 로딩중 이미지로 설정
-
-        listItem.appendChild(img);
-        listPic.appendChild(listItem);
-
+        const target = listPic.children[len++].querySelector('img');
         const tempImage = new Image();
         tempImage.src = `https://cataas.com/cat?_id=${data._id}`;
         tempImage.onload = () => {
-            img.src = tempImage.src; // 실제 이미지로 교체
+            target.src = tempImage.src; // 실제 이미지로 교체
         };
         tempImage.onerror = () => {
             console.error('이미지를 로드하는 데 실패했습니다.');
         };
     });
 }
-
-
 
 const scrollTopBtn = document.querySelector('.scroll-top');
 
