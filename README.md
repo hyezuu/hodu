@@ -17,26 +17,23 @@
 ### 1. 📱 반응형 웹 디자인
 다양한 디바이스에서 최적화된 사용자 경험을 제공합니다.
 
-![호두 랜딩 페이지 반응형 디자인](https://github.com/user-attachments/assets/b17fd97b-76e6-4eb5-a892-a07195103418)
+<img src="https://github.com/user-attachments/assets/b17fd97b-76e6-4eb5-a892-a07195103418" alt="호두 랜딩 페이지 반응형 디자인" width="800"/>
 
 ### 2. 🖼 동적 이미지 갤러리
-![고양이 이미지 로딩](https://github.com/user-attachments/assets/c5570777-ba18-46ff-90c0-41b1ed46cbb2)
+<img src="https://github.com/user-attachments/assets/c5570777-ba18-46ff-90c0-41b1ed46cbb2" alt="고양이 이미지 로딩" width="800"/>
 
 - RESTful API (CATAAS)를 활용한 동적 고양이 이미지 갤러리 구현
 - 로딩 중 귀여운 고양이 이미지로 사용자 경험 개선
 
 ### 3. 💖 인터랙티브 요소
-![하트 떨어지는 효과](https://github.com/user-attachments/assets/4c81d118-dd4f-4e5c-9f5b-704f44391f4f)
+<img src="https://github.com/user-attachments/assets/4c81d118-dd4f-4e5c-9f5b-704f44391f4f" alt="하트 떨어지는 효과" width="800"/>
 
 버튼 클릭 시 하트가 떨어지는 애니메이션 효과로 페이지에 생동감을 더했습니다.
 
 ### 4. 🚧 서비스 준비중 페이지
 | 데스크톱 | 모바일 |
 |:---:|:---:|
-| ![서비스 준비중 페이지](https://github.com/user-attachments/assets/f77bd905-bae2-40a5-81d6-0dd4047212e3) | ![서비스 준비중 페이지 모바일](https://github.com/user-attachments/assets/f653f49b-28f5-436d-b133-407a1511da76) |
-
-- 개발 중인 기능을 위한 준비중 페이지 구현
-- 반응형 디자인 적용으로 모바일 환경에서도 최적화된 표시
+| <img src="https://github.com/user-attachments/assets/f77bd905-bae2-40a5-81d6-0dd4047212e3" alt="서비스 준비중 페이지" width="400"/> | <img src="https://github.com/user-attachments/assets/f653f49b-28f5-436d-b133-407a1511da76" alt="서비스 준비중 페이지 모바일" width="400"/> |
 
 ## 💡 프로젝트 의의
 - 프론트엔드 기술의 실전 적용 능력 향상
